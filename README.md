@@ -3,7 +3,7 @@
 Script to generate plots to monitor PCR replicates, NC, QC scores and Average Scores for GC
 
 ## Instructions 
-1. Prepare directories - gc_monitoring.py will extract data from all */*.xlsm files.
+1. Prepare directories - gc_monitoring.py will extract data from all \*/\*.xlsm files.
 
 2. Run gc_monitoring.py 
 
