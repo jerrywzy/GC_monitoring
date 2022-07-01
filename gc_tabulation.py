@@ -117,7 +117,10 @@ for eachfile in glob.glob("*/*.xlsm"):
 
 final_nc["Date"] = pd.to_datetime(final_nc["Date"])
 final_nc = final_nc.sort_values(by="Date")
-final_nc.to_csv('GCMonitoring/nc.csv', index=False)
+final_nc.to_csv('GCMonitoring/nc_full.csv', index=False)
+
+final_nc = final_nc.drop(final_nc[final_nc['Average of PCR replicates'] != "NC"].index)  # to drop non NC, make sure no samples are >30 also
+final_nc.to_csv('GCMonitoring/nc_only.csv', index=False)
 
 ### Raw Score (QR only)
 raw_score = {}

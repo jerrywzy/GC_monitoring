@@ -33,6 +33,7 @@ for gene_number in range(1,13):
     # subset to G1-G12 each
     df_to_plot_pre = nc_df[['Run', 'Average of PCR replicates', col_name]]
     df_to_plot = df_to_plot_pre.drop(df_to_plot_pre[df_to_plot_pre['Average of PCR replicates'] != "NC"].index)  # to drop NC, make sure no samples are >30 also
+    df_to_plot.to_csv('GCMonitoring/nc_only.csv', index=False)
     
     # create a figure
     fig, ax = plt.subplots(figsize=(12.7, 8.27))
