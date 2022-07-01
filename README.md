@@ -12,6 +12,8 @@ Script to generate plots to monitor PCR replicates, NC, QC scores and Average Sc
     - NC stripplot for each gene from G1-12, for each run
     - Scores for QR1 and QR2 for each run
     - Average Scores for samples for each run
+	
+4. Run gc_tabulation.py to generate tables (CSV files in GC_monitoring/)
 
 ## Required libraries
   - Pandas
